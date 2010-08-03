@@ -30,8 +30,7 @@
 - (void)closeSession;
 
 - (void)writeData:(NSData *)writeData;
-- (void)write;
-- (void)read;
+- (void)readData;
 - (void)accessoryDidDisconnect:(EAAccessory *)accessory;
 
 @property (nonatomic, readonly) EAAccessory *anAccessory;
