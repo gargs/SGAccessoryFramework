@@ -22,6 +22,18 @@
 	
     [window makeKeyAndVisible];
 	
+	//Add version label for Testers
+	UILabel *versionLabel = [[UILabel alloc]initWithFrame:CGRectMake(130, 450, 130, 44)];
+	NSString *bundleVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
+	NSString *shortVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+	versionLabel.text = [NSString stringWithFormat:@"%@ (%@)", shortVersion, bundleVersion];
+	versionLabel.backgroundColor = [UIColor clearColor];
+	versionLabel.textColor = [UIColor whiteColor];
+	versionLabel.font = [UIFont boldSystemFontOfSize:18];
+	[window addSubview:versionLabel];
+	
+	[versionLabel release];
+	
 	return YES;
 }
 
