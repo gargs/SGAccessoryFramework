@@ -29,7 +29,7 @@
 - (BOOL)openSession;
 - (void)closeSession;
 
-- (void)writeData:(NSData *)writeData;
+- (void)writeData:(NSData *)data;
 - (void)readData;
 - (void)accessoryDidDisconnect:(EAAccessory *)accessory;
 
